@@ -14,6 +14,10 @@ from .units import (us_CGS, us_GeometricSolar, us_Nuclear, us_SI)
 
 # conversion factors from code units of GR-Athena++ to common physical units
 conv_gra = {
+  "mass [g]": Constant(
+    us_GeometricSolar(us_CGS, "mass", 1),
+    "gra_cu -> g"
+  ),
   "rho [g cm^-3]": Constant(
     us_GeometricSolar(us_CGS, "density", 1) *
     us_GeometricSolar(us_CGS, "mass", 1),
